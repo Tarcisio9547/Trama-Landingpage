@@ -1658,18 +1658,16 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting && !triggered) {
                     triggered = true;
-                    // Mockup enters immediately
-                    mockup.classList.add('anim-in');
-                    
-                    setTimeout(() => { statValues.forEach(el => animateCounter(el, 2000)); if (pipelineValue) animateCounter(pipelineValue, 2000); }, 250);
-                    setTimeout(() => { stages.classList.add('anim-in'); }, 600);
-                    activities.forEach((item, i) => { setTimeout(() => { item.classList.add('anim-in'); }, 900 + i * 250); });
+                    setTimeout(() => { mockup.classList.add('anim-in'); }, 100);
+                    setTimeout(() => { statValues.forEach(el => animateCounter(el, 2000)); if (pipelineValue) animateCounter(pipelineValue, 2000); }, 350);
+                    setTimeout(() => { stages.classList.add('anim-in'); }, 700);
+                    activities.forEach((item, i) => { setTimeout(() => { item.classList.add('anim-in'); }, 1000 + i * 250); });
                     observer.disconnect();
                 }
             });
         }, { 
-            threshold: 0.05,
-            rootMargin: "0px 0px 100px 0px" // Trigger before it even scrolls into view 
+            threshold: 0.1,
+            rootMargin: "0px" 
         });
 
         if (mockup) observer.observe(mockup);
@@ -1704,29 +1702,29 @@
                             var row = card.closest('.how-step');
                             if (row) row.classList.add('how-anim-in');
 
-                            // 1. card entra (IMEDIATO)
-                            card.classList.add('sv-in');
+                            // 1. card entra
+                            setTimeout(function () { card.classList.add('sv-in'); }, 50);
 
                             // 2. linhas em cascata
                             card.querySelectorAll('.sv-row').forEach(function (rowItem, i) {
-                                setTimeout(function () { rowItem.classList.add('sv-in'); }, 100 + i * 150);
+                                setTimeout(function () { rowItem.classList.add('sv-in'); }, 150 + i * 150);
                             });
 
                             // 3. badges por último
                             card.querySelectorAll('.sv-bdg').forEach(function (bdg, i) {
-                                setTimeout(function () { bdg.classList.add('sv-in'); }, 400 + i * 150);
+                                setTimeout(function () { bdg.classList.add('sv-in'); }, 450 + i * 150);
                             });
 
                             // 4. barra cresce
                             if (bar) {
-                                setTimeout(function () { bar.classList.add('sv-in'); }, 300);
+                                setTimeout(function () { bar.classList.add('sv-in'); }, 350);
                             }
                             obs.disconnect();
                         }
                     });
                 }, { 
-                    threshold: 0.05,
-                    rootMargin: "0px 0px 50px 0px"  // Trigger slightly before changing view line
+                    threshold: 0.1,
+                    rootMargin: "0px" 
                 });
                 obs.observe(card);
             });
