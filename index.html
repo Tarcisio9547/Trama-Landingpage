@@ -723,33 +723,29 @@
             
             /* Mobile Nav Pill Style */
             .nav-links { 
-                display: flex; 
-                position: fixed;
-                top: 72px; /* Slight gap from header */
-                left: 50%;
-                transform: translateX(-50%);
-                background: var(--white);
-                padding: 8px 16px;
-                gap: 16px;
-                border-radius: 50px;
-                box-shadow: 0 4px 20px rgba(25, 61, 91, 0.15);
-                border: 1px solid rgba(25, 61, 91, 0.08);
-                width: max-content;
-                max-width: 90vw;
-                overflow-x: auto;
-                scrollbar-width: none;
-                z-index: 1001;
+                display: flex;
+                position: static;
+                transform: none;
+                background: transparent;
+                padding: 0;
+                gap: 12px;
+                border: none;
+                box-shadow: none;
+                width: auto;
+                max-width: none;
+                margin-right: -4px;
             }
-            .nav-links::-webkit-scrollbar { display: none; }
             .nav-links a { 
-                font-size: 13px; 
-                white-space: nowrap;
+                font-size: 11px; 
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
                 color: var(--indigo);
-                font-weight: 500;
+                font-weight: 600;
             }
+            .nav-links a:not([href="#como-funciona"]) { display: none; } /* Show only primary link on mobile header */
             .nav-cta { display: none; }
             
-            .hero { padding: 140px 20px 64px; }
+            .hero { padding: 100px 20px 64px; }
 
             h1 {
                 font-size: 38px;
