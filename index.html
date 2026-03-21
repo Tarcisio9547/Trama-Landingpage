@@ -1684,24 +1684,24 @@
 
                             // 2. linhas em cascata
                             card.querySelectorAll('.sv-row').forEach(function (rowItem, i) {
-                                setTimeout(function () { rowItem.classList.add('sv-in'); }, 400 + i * 250);
+                                setTimeout(function () { rowItem.classList.add('sv-in'); }, 250 + i * 150);
                             });
 
                             // 3. badges por último
                             card.querySelectorAll('.sv-bdg').forEach(function (bdg, i) {
-                                setTimeout(function () { bdg.classList.add('sv-in'); }, 850 + i * 200);
+                                setTimeout(function () { bdg.classList.add('sv-in'); }, 550 + i * 150);
                             });
 
                             // 4. barra cresce
                             if (bar) {
-                                setTimeout(function () { bar.classList.add('sv-in'); }, 700);
+                                setTimeout(function () { bar.classList.add('sv-in'); }, 400);
                             }
                             obs.disconnect();
                         }
                     });
                 }, { 
-                    threshold: 0.5,
-                    rootMargin: "0px 0px -15% 0px" 
+                    threshold: 0.15,
+                    rootMargin: "0px 0px -5% 0px" 
                 });
                 obs.observe(card);
             });
