@@ -722,27 +722,29 @@
             }
             
             /* Mobile Nav Pill Style */
+            .nav-logo-img { height: 20px; } /* Slightly smaller for mobile space */
+
             .nav-links { 
                 display: flex;
                 position: static;
                 transform: none;
                 background: transparent;
                 padding: 0;
-                gap: 12px;
+                gap: 8px;
                 border: none;
                 box-shadow: none;
                 width: auto;
                 max-width: none;
-                margin-right: -4px;
+                margin-right: -2px;
             }
             .nav-links a { 
-                font-size: 11px; 
+                font-size: 9.5px; 
                 text-transform: uppercase;
-                letter-spacing: 0.05em;
+                letter-spacing: 0.03em;
                 color: var(--indigo);
-                font-weight: 600;
+                font-weight: 700;
+                white-space: nowrap;
             }
-            .nav-links a:not([href="#como-funciona"]) { display: none; } /* Show only primary link on mobile header */
             .nav-cta { display: none; }
             
             .hero { padding: 100px 20px 64px; }
