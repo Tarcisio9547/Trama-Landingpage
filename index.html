@@ -729,21 +729,23 @@
                 position: static;
                 transform: none;
                 background: transparent;
-                padding: 0;
+                padding: 0 0 10px; /* Align low in the header */
                 gap: 8px;
                 border: none;
                 box-shadow: none;
                 width: auto;
                 max-width: none;
                 margin-right: -2px;
+                align-self: flex-end;
             }
             .nav-links a { 
-                font-size: 8.5px; 
+                font-size: 8px; 
                 text-transform: uppercase;
-                letter-spacing: 0.02em;
+                letter-spacing: 0.1em;
                 color: var(--indigo);
                 font-weight: 700;
                 white-space: nowrap;
+                opacity: 0.6;
             }
             .nav-cta { display: none; }
             
