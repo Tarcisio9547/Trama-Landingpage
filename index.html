@@ -32,6 +32,10 @@
             --off-white: #FAF9F7;
             --white: #FFFFFF;
             --light-gray: #F5F5F5;
+            --indigo-deep: #193D5B;
+            --indigo-medium: #3E5A74;
+            --graphite-medium: #4A4A4A;
+            --graphite-light: #A8A8A8;
         }
 
         html {
@@ -688,21 +692,43 @@
         }
 
         @media (max-width: 1024px) {
-            nav { padding: 0 32px; }
-            .hero { 
-                grid-template-columns: 1fr; 
-                padding: 120px 32px 64px; 
-                gap: 64px; 
+            nav {
+                padding: 0 32px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 120px 32px 64px;
+                gap: 64px;
                 text-align: center;
                 min-height: auto;
             }
-            .content { max-width: 100%; margin: 0 auto; }
-            .cta-group { justify-content: center; }
-            .trust-strip { justify-content: center; }
-            .visual { margin-top: 40px; overflow: visible; }
-            .mockup-wrap { margin: 0 auto; }
 
-            h1 { font-size: 52px; }
+            .content {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+            .cta-group {
+                justify-content: center;
+            }
+
+            .trust-strip {
+                justify-content: center;
+            }
+
+            .visual {
+                margin-top: 40px;
+                overflow: visible;
+            }
+
+            .mockup-wrap {
+                margin: 0 auto;
+            }
+
+            h1 {
+                font-size: 52px;
+            }
 
             .proof-strip {
                 flex-wrap: wrap;
@@ -711,25 +737,32 @@
                 justify-content: center;
             }
 
-            .proof-sep { display: none; }
+            .proof-sep {
+                display: none;
+            }
         }
 
         @media (max-width: 768px) {
-            nav { 
-                padding: 0 16px; 
+            nav {
+                padding: 0 16px;
                 height: 60px;
                 background: var(--off-white);
             }
-            
-            /* Mobile Nav Pill Style */
-            .nav-logo-img { height: 48px; } /* Nearly original size, still fits nicely */
 
-            .nav-links { 
+            /* Mobile Nav Pill Style */
+            .nav-logo-img {
+                height: 48px;
+            }
+
+            /* Nearly original size, still fits nicely */
+
+            .nav-links {
                 display: flex;
                 position: static;
                 transform: none;
                 background: transparent;
-                padding: 0 0 10px; /* Align low in the header */
+                padding: 0 0 10px;
+                /* Align low in the header */
                 gap: 8px;
                 border: none;
                 box-shadow: none;
@@ -738,8 +771,9 @@
                 margin-right: -2px;
                 align-self: flex-end;
             }
-            .nav-links a { 
-                font-size: 8px; 
+
+            .nav-links a {
+                font-size: 8px;
                 text-transform: uppercase;
                 letter-spacing: 0.1em;
                 color: var(--indigo);
@@ -747,10 +781,13 @@
                 white-space: nowrap;
                 opacity: 0.6;
             }
-            .nav-cta { display: none; }
-            
-            .hero { 
-                padding: 84px 20px 64px; 
+
+            .nav-cta {
+                display: none;
+            }
+
+            .hero {
+                padding: 84px 20px 64px;
                 text-align: center;
                 display: flex;
                 flex-direction: column;
@@ -770,16 +807,25 @@
                 max-width: 420px;
                 color: var(--graphite-mid);
             }
-            
-            .usp-line { 
-                justify-content: center; 
+
+            .usp-line {
+                justify-content: center;
                 margin-bottom: 32px;
                 font-size: 14px;
             }
-            .usp-line::before { display: none; }
 
-            .section-tag .dot { display: none; }
-            .section-tag { padding-left: 18px; padding-right: 18px; }
+            .usp-line::before {
+                display: none;
+            }
+
+            .section-tag .dot {
+                display: none;
+            }
+
+            .section-tag {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
 
             .mockup-wrap {
                 transform: scale(1);
@@ -787,9 +833,11 @@
                 width: 100%;
                 margin: 0;
             }
+
             .mockup {
                 width: 100%;
-                transform: rotate(0) !important; /* Flatten on mobile for better space usage */
+                transform: rotate(0) !important;
+                /* Flatten on mobile for better space usage */
             }
 
             .cta-group {
@@ -800,7 +848,8 @@
                 margin-bottom: 24px;
             }
 
-            .btn-primary, .btn-secondary {
+            .btn-primary,
+            .btn-secondary {
                 width: 100%;
                 justify-content: center;
                 padding: 18px;
@@ -815,41 +864,80 @@
                 border: none;
                 padding: 16px 0 0;
             }
+
             .trust-item {
                 font-size: 13px;
                 opacity: 0.85;
                 gap: 6px;
             }
-            .trust-item svg { width: 14px; height: 14px; color: var(--mustard); }
-            .trust-sep { display: none; }
+
+            .trust-item svg {
+                width: 14px;
+                height: 14px;
+                color: var(--mustard);
+            }
+
+            .trust-sep {
+                display: none;
+            }
 
             .proof-strip {
                 padding: 48px 20px;
                 gap: 40px;
                 justify-content: center;
             }
-            .proof-num { font-size: 40px; }
+
+            .proof-num {
+                font-size: 40px;
+            }
 
             /* Fix Vertical Clipping in How It Works */
-            .how-section { padding: 80px 16px; }
-            .how-step-visual { 
-                padding: 16px; 
+            .how-section {
+                padding: 80px 16px;
+            }
+
+            .how-step-visual {
+                padding: 16px;
                 width: 100%;
                 margin: 0;
-                overflow: visible; /* Allow content to flow naturally */
+                overflow: visible;
+                /* Allow content to flow naturally */
                 background: rgba(255, 255, 255, 0.04);
             }
-            .how-vrow { 
-                flex-wrap: wrap; 
+
+            .how-vrow {
+                flex-wrap: wrap;
                 gap: 12px;
                 padding: 12px 0;
             }
-            .how-vtext { flex: 1; min-width: 120px; }
-            .how-vbadge { order: 3; margin-left: auto; } /* Badge moves to new line if space is tight */
-            
-            .how-vicon { width: 36px; height: 36px; font-size: 16px; }
-            .how-vtitle { font-size: 14px; font-weight: 500; }
-            .how-vsub { font-size: 11px; opacity: 0.6; }
+
+            .how-vtext {
+                flex: 1;
+                min-width: 120px;
+            }
+
+            .how-vbadge {
+                order: 3;
+                margin-left: auto;
+            }
+
+            /* Badge moves to new line if space is tight */
+
+            .how-vicon {
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
+            }
+
+            .how-vtitle {
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            .how-vsub {
+                font-size: 11px;
+                opacity: 0.6;
+            }
         }
 
         /* ════════ COMO FUNCIONA — ESTILOS ════════ */
@@ -1223,17 +1311,313 @@
         }
 
         /* Animation states for visuals */
-        .sv { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
-        .sv.sv-in { opacity: 1; transform: translateY(0); }
+        .sv {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
 
-        .sv-row { opacity: 0; transform: translateY(12px); transition: opacity 0.8s ease, transform 0.8s ease; }
-        .sv-row.sv-in { opacity: 1; transform: translateY(0); }
+        .sv.sv-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-        .sv-bdg { opacity: 0; transform: scale(0.7); transition: opacity 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        .sv-bdg.sv-in { opacity: 1; transform: scale(1); }
+        .sv-row {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
 
-        .sv-bar-fill { width: 0 !important; transition: width 1s cubic-bezier(0.4, 0, 0.2, 1); }
-        .sv-bar-fill.sv-in { width: var(--bar-target) !important; }
+        .sv-row.sv-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .sv-bdg {
+            opacity: 0;
+            transform: scale(0.7);
+            transition: opacity 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .sv-bdg.sv-in {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .sv-bar-fill {
+            width: 0 !important;
+            transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sv-bar-fill.sv-in {
+            width: var(--bar-target) !important;
+        }
+
+        /* ── PARA QUEM É ── */
+        .forwhom-section {
+            background: var(--off-white);
+            position: relative;
+            padding: 96px 64px;
+            z-index: 1;
+        }
+
+        .forwhom-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(25, 61, 91, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(25, 61, 91, 0.03) 1px, transparent 1px);
+            background-size: 80px 80px;
+            pointer-events: none;
+        }
+
+        .forwhom-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .forwhom-header {
+            max-width: 640px;
+            margin-bottom: 64px;
+        }
+
+        .forwhom-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(188, 143, 74, 0.1);
+            border: 1px solid rgba(188, 143, 74, 0.3);
+            color: var(--mustard-dark);
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 50px;
+            margin-bottom: 24px;
+        }
+
+        .forwhom-header h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 1.05;
+            color: var(--indigo-deep);
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .forwhom-header h2 .fw {
+            color: var(--mustard-primary);
+        }
+
+        .forwhom-header p {
+            font-size: 17px;
+            font-weight: 300;
+            color: var(--graphite-medium);
+            line-height: 1.7;
+            max-width: 520px;
+        }
+
+        /* ── PERSONA CARDS ── */
+        .persona-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        .persona-card {
+            background: var(--white);
+            border-radius: 12px;
+            border: 1px solid rgba(25, 61, 91, 0.08);
+            padding: 36px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            box-shadow: 0 2px 12px rgba(25, 61, 91, 0.04);
+        }
+
+        .persona-card.fw-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .persona-card:nth-child(1) {
+            border-top: 3px solid var(--indigo-deep);
+        }
+
+        .persona-card:nth-child(2) {
+            border-top: 3px solid var(--mustard-primary);
+        }
+
+        .persona-card:nth-child(3) {
+            border-top: 3px solid var(--indigo-light);
+        }
+
+        .persona-role {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            font-weight: 400;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--graphite-light);
+            margin-bottom: 4px;
+        }
+
+        .persona-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--indigo-deep);
+            line-height: 1.2;
+        }
+
+        .persona-body {
+            font-size: 15px;
+            font-weight: 300;
+            color: var(--graphite-medium);
+            line-height: 1.75;
+            flex: 1;
+        }
+
+        .persona-quote {
+            font-family: 'Space Grotesk', sans-serif;
+            font-style: italic;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--indigo-medium);
+            line-height: 1.55;
+            padding-top: 20px;
+            border-top: 1px solid rgba(25, 61, 91, 0.08);
+            position: relative;
+        }
+
+        .persona-quote::before {
+            content: '“';
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            color: var(--mustard-primary);
+            opacity: 0.3;
+            vertical-align: top;
+            margin-right: 2px;
+            line-height: 1;
+        }
+
+
+
+        /* ── ANTI-PERSONA ── */
+        .antipersona {
+            background: var(--indigo);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 4px solid var(--mustard-primary);
+            border-radius: 12px;
+            padding: 40px 48px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 40px;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+            margin-top: 48px;
+            position: relative;
+            box-shadow: 
+                0 40px 100px -20px rgba(188, 143, 74, 0.45),
+                0 20px 60px -10px rgba(188, 143, 74, 0.3),
+                0 0 120px rgba(188, 143, 74, 0.2);
+        }
+
+        .antipersona.fw-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .antipersona-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--white);
+            box-shadow: 0 4px 12px rgba(25, 61, 91, 0.05);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border: 1px solid rgba(25, 61, 91, 0.05);
+        }
+
+        .antipersona-icon svg {
+            width: 32px;
+            height: 32px;
+            color: var(--mustard-primary);
+        }
+
+        .antipersona-label {
+            font-family: 'Space Grotesk', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+
+
+        .antipersona-text {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.75;
+        }
+
+        .antipersona-text strong {
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        /* ── RESPONSIVE PARA QUEM É ── */
+        @media (max-width: 1024px) {
+            .forwhom-section {
+                padding: 72px 32px;
+            }
+
+            .persona-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .forwhom-header h2 {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .forwhom-section {
+                padding: 56px 20px;
+            }
+
+            .forwhom-header h2 {
+                font-size: 30px;
+            }
+
+            .antipersona {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .antipersona-icon {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -1246,7 +1630,7 @@
         </a>
         <div class="nav-links">
             <a href="#como-funciona" class="nav-link">Como funciona</a>
-            <a href="#" class="nav-link">Para quem é</a>
+            <a href="#para-quem-e" class="nav-link">Para quem é</a>
             <a href="#" class="nav-link">Recursos</a>
         </div>
         <a href="#" class="nav-cta">Agendar demo →</a>
@@ -1391,6 +1775,7 @@
         </div>
     </section>
 
+
     <!-- PROOF STRIP -->
     <div class="proof-strip">
         <div class="proof-item">
@@ -1423,7 +1808,8 @@
         <div class="how-inner">
             <div class="how-header">
                 <div class="how-tag">&#9889; Como funciona</div>
-                <h2>3 dias para <span class="how-hl">nunca</span> mais<br>depender de <span class="how-hl">planilha.</span></h2>
+                <h2>3 dias para <span class="how-hl">nunca</span> mais<br>depender de <span
+                        class="how-hl">planilha.</span></h2>
                 <p>Sem TI. Sem curva de aprendizado. Funciona do jeito que seu time já trabalha.</p>
             </div>
             <div class="how-steps" id="how-steps-container">
@@ -1623,6 +2009,95 @@
         </div>
     </section>
 
+    <!-- ════════ PARA QUEM É ════════ -->
+    <section class="forwhom-section" id="para-quem-e">
+        <div class="forwhom-inner">
+
+            <div class="forwhom-header">
+                <div class="forwhom-tag">Para quem é</div>
+                <h2>Não somos para <span class="fw">todo mundo.</span></h2>
+                <p>Somos para quem já cresceu — e sente a operação travando o próximo nível.</p>
+            </div>
+
+            <div class="persona-grid" id="persona-grid">
+
+                <!-- CEO -->
+                <div class="persona-card">
+                    <div>
+                        <div class="persona-title">CEO / Founder B2B</div>
+                    </div>
+                    <p class="persona-body">
+                        Você já trocou vendedor. Trocou de gerente. Em alguns casos, trocou o time todo. Esqueceu só de
+                        trocar o processo. O problema nunca esteve nas pessoas. Estava no processo. Enquanto seu time
+                        abria planilha, procurava o contato e tentava lembrar o contexto. Seu concorrente já tinha feito
+                        o primeiro contato, tirado as dúvidas e marcado a reunião.
+                    </p>
+                    <div class="persona-quote">
+                        Não tenho previsibilidade de vendas nem visibilidade do
+                        pipeline. Virei sócio da sorte.
+                    </div>
+                </div>
+
+                <!-- Diretor Comercial -->
+                <div class="persona-card">
+                    <div>
+                        <div class="persona-title">Diretor Comercial</div>
+                    </div>
+                    <p class="persona-body">
+                        Seu time não é fraco. Mas todo dia leads entram, somem no WhatsApp, caem no esquecimento e
+                        ninguém sabe exatamente onde. Você descobre que perdeu um negócio semanas depois. O cliente já
+                        está com o concorrente. Não reclamou, não deu feedback. Simplesmente foi. E você fica sem saber
+                        se foi preço, produto ou processo. Quase sempre é processo.
+                    </p>
+                    <div class="persona-quote">
+                        Perco mais negócios pelo que não aconteceu do que pelo que aconteceu errado.
+                    </div>
+                </div>
+
+                <!-- Head de Operações -->
+                <div class="persona-card">
+                    <div>
+                        <div class="persona-title">Head de Operações / COO</div>
+                    </div>
+                    <p class="persona-body">
+                        Uma empresa que não responde um lead em menos de 10 minutos passa uma mensagem silenciosa: não
+                        estamos preparados para te atender. Seu concorrente que respondeu em 3 minutos não estava
+                        vendendo melhor. Estava apenas pronto. Isso não aparece em nenhuma reunião. Mas aparece na taxa
+                        de conversão. E na reputação que você nunca vê sendo destruída. Até que ela já foi.
+                    </p>
+                    <div class="persona-quote">
+                        Crescer com essa estrutura não é escala. É só mais caos em velocidade maior.
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ANTI-PERSONA -->
+            <div class="antipersona" id="antipersona">
+                <div class="antipersona-icon">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="22" x2="18" y1="12" y2="12"></line>
+                        <line x1="6" x2="2" y1="12" y2="12"></line>
+                        <line x1="12" x2="12" y1="6" y2="2"></line>
+                        <line x1="12" x2="12" y1="22" y2="18"></line>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                </div>
+                <div>
+                    <div class="antipersona-label">Transparência</div>
+                    <p class="antipersona-text">
+                        A Trama foi construída para quem <strong>já tem o que escalar</strong>. Se você ainda está
+                        validando produto ou formando o primeiro time comercial, esse não é o momento certo. Não
+                        queremos vender para quem não vai ter resultado. Quando o problema virar escala, a gente está
+                        aqui.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <!-- SCRIPTS ORIGINAIS — sem alteração -->
     <script>
         const mockup = document.querySelector('.mockup');
@@ -1665,9 +2140,9 @@
                     observer.disconnect();
                 }
             });
-        }, { 
+        }, {
             threshold: 0.1,
-            rootMargin: "0px" 
+            rootMargin: "0px"
         });
 
         if (mockup) observer.observe(mockup);
@@ -1722,12 +2197,38 @@
                             obs.disconnect();
                         }
                     });
-                }, { 
+                }, {
                     threshold: 0.1,
-                    rootMargin: "0px" 
+                    rootMargin: "0px"
                 });
                 obs.observe(card);
             });
+        })();
+    </script>
+
+    <script>
+        (function () {
+            var cards = document.querySelectorAll('.persona-card');
+            var antipersona = document.getElementById('antipersona');
+            var fwTriggered = false;
+
+            var fwObs = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting && !fwTriggered) {
+                        fwTriggered = true;
+                        cards.forEach(function (card, i) {
+                            setTimeout(function () { card.classList.add('fw-in'); }, i * 150);
+                        });
+                        setTimeout(function () {
+                            if (antipersona) antipersona.classList.add('fw-in');
+                        }, cards.length * 150 + 100);
+                        fwObs.disconnect();
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            var grid = document.getElementById('persona-grid');
+            if (grid) fwObs.observe(grid);
         })();
     </script>
 
