@@ -1615,7 +1615,15 @@
             }
 
             .antipersona-icon {
-                display: none;
+                display: flex;
+                width: 52px;
+                height: 52px;
+                margin-bottom: 12px;
+            }
+
+            .antipersona-icon svg {
+                width: 26px;
+                height: 26px;
             }
         }
     </style>
@@ -2075,15 +2083,7 @@
             <!-- ANTI-PERSONA -->
             <div class="antipersona" id="antipersona">
                 <div class="antipersona-icon">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="22" x2="18" y1="12" y2="12"></line>
-                        <line x1="6" x2="2" y1="12" y2="12"></line>
-                        <line x1="12" x2="12" y1="6" y2="2"></line>
-                        <line x1="12" x2="12" y1="22" y2="18"></line>
-                        <circle cx="12" cy="12" r="3"></circle>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
                 </div>
                 <div>
                     <div class="antipersona-label">Transparência</div>
