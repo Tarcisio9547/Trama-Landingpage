@@ -1631,6 +1631,300 @@
                 height: 26px;
             }
         }
+        /* ── RECURSOS ── */
+        .recursos-section {
+            background: var(--indigo-deep);
+            position: relative;
+            padding: 96px 64px;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .recursos-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+            background-size: 80px 80px;
+            pointer-events: none;
+        }
+
+        .recursos-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .recursos-header {
+            max-width: 720px;
+            margin-bottom: 80px;
+        }
+
+        .recursos-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(188,143,74,0.35);
+            color: var(--mustard-primary);
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 28px;
+        }
+
+        .recursos-header h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 1.3;
+            color: var(--white);
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+
+        .recursos-header h2 .rw { color: var(--mustard-primary); }
+
+        .recursos-header p {
+            font-size: 16px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.7;
+        }
+
+        .recursos-bloco {
+            margin-bottom: 72px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .recursos-bloco.rb-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .recursos-bloco:last-child { margin-bottom: 0; }
+
+        .bloco-label {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .bloco-label-text {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--mustard-primary);
+        }
+
+        .bloco-label-line {
+            flex: 1;
+            height: 1px;
+            background: rgba(188,143,74,0.2);
+        }
+
+        .recursos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 16px;
+        }
+
+        .recurso-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .recurso-card:hover {
+            background: rgba(255,255,255,0.07);
+            border-color: rgba(188,143,74,0.3);
+        }
+
+        .recurso-top {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .recurso-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: rgba(188,143,74,0.12);
+            border: 1px solid rgba(188,143,74,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .recurso-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--white);
+            line-height: 1.3;
+            padding-top: 8px;
+        }
+
+        .recurso-compare {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .compare-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 14px;
+            border-radius: 8px;
+        }
+
+        .compare-item.antes {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .compare-item.depois {
+            background: rgba(188,143,74,0.08);
+            border: 1px solid rgba(188,143,74,0.15);
+        }
+
+        .compare-badge {
+            font-family: 'Space Mono', monospace;
+            font-size: 9px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 50px;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .compare-item.antes .compare-badge {
+            background: rgba(255,255,255,0.06);
+            color: rgba(255,255,255,0.3);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .compare-item.depois .compare-badge {
+            background: rgba(188,143,74,0.15);
+            color: var(--mustard-primary);
+            border: 1px solid rgba(188,143,74,0.25);
+        }
+
+        .compare-text {
+            font-size: 13px;
+            font-weight: 300;
+            line-height: 1.55;
+        }
+
+        .compare-item.antes .compare-text { color: rgba(255,255,255,0.4); }
+        .compare-item.depois .compare-text { color: rgba(255,255,255,0.85); }
+
+        .recursos-cta {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 56px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .recursos-cta-headline {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            color: var(--white);
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .recursos-cta-headline .rw { color: var(--mustard-primary); }
+
+        .recursos-cta p {
+            font-size: 15px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 32px;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .recursos-cta-btns {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .rc-btn-p {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--mustard-primary);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(188,143,74,0.25);
+            transition: background 0.2s;
+        }
+
+        .rc-btn-p:hover { background: var(--mustard-dark); }
+
+        .rc-btn-s {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: rgba(255,255,255,0.6);
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            border: 1.5px solid rgba(255,255,255,0.15);
+            transition: all 0.2s;
+        }
+
+        .rc-btn-s:hover {
+            border-color: rgba(255,255,255,0.35);
+            color: rgba(255,255,255,0.9);
+        }
+
+        @media (max-width: 1024px) {
+            .recursos-section { padding: 72px 32px; }
+            .recursos-header h2 { font-size: 26px; }
+        }
+
+        @media (max-width: 768px) {
+            .recursos-section { padding: 56px 20px; }
+            .recursos-grid { grid-template-columns: 1fr; }
+            .recursos-header h2 { font-size: 22px; }
+            .recursos-cta-btns { flex-direction: column; }
+            .rc-btn-p, .rc-btn-s { width: 100%; justify-content: center; }
+        }
     </style>
 </head>
 
@@ -1644,7 +1938,7 @@
         <div class="nav-links">
             <a href="#como-funciona" class="nav-link">Como funciona</a>
             <a href="#para-quem-e" class="nav-link">Para quem é</a>
-            <a href="#" class="nav-link">Recursos</a>
+            <a href="#recursos" class="nav-link">Recursos</a>
         </div>
         <a href="#" class="nav-cta">Agendar demo →</a>
     </nav>
@@ -2088,7 +2382,7 @@
             <!-- ANTI-PERSONA -->
             <div class="antipersona" id="antipersona">
                 <div class="antipersona-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
                 </div>
                 <div>
                     <div class="antipersona-label">Transparência</div>
@@ -2098,6 +2392,264 @@
                         A ferramenta certa no momento errado não gera resultado para ninguém.
                         Quando a escala virar o problema, estaremos aqui.
                     </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ════════ RECURSOS ════════ -->
+    <section class="recursos-section" id="recursos">
+        <div class="recursos-inner">
+
+            <div class="recursos-header">
+                <div class="recursos-tag">⚡ Recursos</div>
+                <h2>Antes de aprovarmos um novo recurso nos perguntamos: <span class="rw">"vai gerar mais vendas para o time comercial?"</span> Se a resposta for não, não entra.</h2>
+                <p>Sem os 150 templates que ninguém usa. Sem as 15.000 integrações que ninguém configura. Só o que funciona no dia a dia de um time comercial de alta performance.</p>
+            </div>
+
+            <!-- BLOCO 1: CAPTURA -->
+            <div class="recursos-bloco" data-rb>
+                <div class="bloco-label">
+                    <span class="bloco-label-text">Captura</span>
+                    <span class="bloco-label-line"></span>
+                    <span style="font-family:'Space Mono',monospace;font-size:9px;color:rgba(255,255,255,0.2);letter-spacing:0.08em;">Nenhum lead escapa</span>
+                </div>
+                <div class="recursos-grid">
+
+                    <div class="recurso-card">
+                        <div class="recurso-top">
+                            <div class="recurso-icon">🔗</div>
+                            <div class="recurso-title">Integração Omnicanal</div>
+                        </div>
+                        <div class="recurso-compare">
+                            <div class="compare-item antes">
+                                <span class="compare-badge">antes</span>
+                                <span class="compare-text">5 abas abertas, contexto perdido, cliente repetindo a mesma informação para pessoas diferentes.</span>
+                            </div>
+                            <div class="compare-item depois">
+                                <span class="compare-badge">depois</span>
+                                <span class="compare-text">WhatsApp Business, Instagram, Messenger e e-mail em um painel. O cliente fala por onde quiser. Você responde de um lugar só.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recurso-card">
+                        <div class="recurso-top">
+                            <div class="recurso-icon">🎯</div>
+                            <div class="recurso-title">Captura Automática de Leads</div>
+                        </div>
+                        <div class="recurso-compare">
+                            <div class="compare-item antes">
+                                <span class="compare-badge">antes</span>
+                                <span class="compare-text">Vendedor anota no bloco de notas, transfere para planilha, planilha some. Lead some junto.</span>
+                            </div>
+                            <div class="compare-item depois">
+                                <span class="compare-badge">depois</span>
+                                <span class="compare-text">Mensagem chegou, lead criado no funil. Sem ação manual. Sem ninguém lembrar de registrar.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- BLOCO 2: OPERAÇÃO -->
+            <div class="recursos-bloco" data-rb>
+                <div class="bloco-label">
+                    <span class="bloco-label-text">Operação</span>
+                    <span class="bloco-label-line"></span>
+                    <span style="font-family:'Space Mono',monospace;font-size:9px;color:rgba(255,255,255,0.2);letter-spacing:0.08em;">O processo que roda sozinho</span>
+                </div>
+                <div class="recursos-grid">
+
+                    <div class="recurso-card">
+                        <div class="recurso-top">
+                            <div class="recurso-icon">🔁</div>
+                            <div class="recurso-title">Follow-up Automático</div>
+                        </div>
+                        <div class="recurso-compare">
+                            <div class="compare-item antes">
+                                <span class="compare-badge">antes</span>
+                                <span class="compare-text">Lead esfriou porque alguém esqueceu de mandar mensagem na hora certa. Acontece todo dia.</span>
+                            </div>
+                            <div class="compare-item depois">
+                                <span class="compare-badge">depois</span>
+                                <span class="compare-text">O sistema dispara no momento certo. Seu time entra em cena só quando o lead responde.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recurso-card">
+                        <div class="recurso-top">
+                            <div class="recurso-icon">📋</div>
+                            <div class="recurso-title">Geração Automática de Propostas</div>
+                        </div>
+                        <div class="recurso-compare">
+                            <div class="compare-item antes">
+                                <span class="compare-badge">antes</span>
+                                <span class="compare-text">Vendedor abre planilha, copia valores, formata PDF, manda por e-mail. 40 minutos para uma proposta.</span>
+                            </div>
+                            <div class="compare-item depois">
+                                <span class="compare-badge">depois</span>
+                                <span class="compare-text">Proposta gerada com os itens e valores certos. Enviada em segundos. Vendedor volta para vender.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recurso-card">
+                        <div class="recurso-top">
+                            <div class="recurso-icon">📅</div>
+                            <div class="recurso-title">Sincronização de Calendário</div>
+                        </div>
+                        <div class="recurso-compare">
+                            <div class="compare-item antes">
+                                <span class="compare-badge">antes</span>
+                                <span class="compare-text">Três e-mails para confirmar um horário. Reunião sem lembrete. Prospect não aparece.</span>
+                            </div>
+                            <div class="compare-item depois">
+                                <span class="compare-badge">depois</span>
+                                <span class="compare-text">Link de agendamento, confirmação automática, lembrete enviado. A reunião acontece.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- BLOCO 3: VISIBILIDADE -->
+            <div class="recursos-bloco" data-rb>
+                <div class="bloco-label">
+                    <span class="bloco-label-text">Visibilidade</span>
+                    <span class="bloco-label-line"></span>
+                    <span style="font-family:'Space Mono',monospace;font-size:9px;color:rgba(255,255,255,0.2);letter-spacing:0.08em;">Decisão com dado, não com feeling</span>
+                </div>
+                <div class="recursos-grid">
+
+                    <div class="recurso-card">
+                        <div class="recurso-top">
+                            <div class="recurso-icon">📊</div>
+                            <div class="recurso-title">Pipeline Visual</div>
+                        </div>
+                        <div class="recurso-compare">
+                            <div class="compare-item antes">
+                                <span class="compare-badge">antes</span>
+                                <span class="compare-text">"Acho que vai fechar." Todo vendedor, toda semana. Pipeline é achismo com planilha.</span>
+                            </div>
+                            <div class="compare-item depois">
+                                <span class="compare-badge">depois</span>
+                                <span class="compare-text">Funil em tempo real. Você vê o que está aberto, travado e prestes a fechar. Sem reunião para descobrir.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recurso-card">
+                        <div class="recurso-top">
+                            <div class="recurso-icon">📈</div>
+                            <div class="recurso-title">Dashboard de Métricas</div>
+                        </div>
+                        <div class="recurso-compare">
+                            <div class="compare-item antes">
+                                <span class="compare-badge">antes</span>
+                                <span class="compare-text">Relatório montado na sexta à tarde por alguém que tinha outras coisas para fazer.</span>
+                            </div>
+                            <div class="compare-item depois">
+                                <span class="compare-badge">depois</span>
+                                <span class="compare-text">Pipeline total, ROI, performance por vendedor. Atualizado sozinho. Sempre disponível.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recurso-card">
+                        <div class="recurso-top">
+                            <div class="recurso-icon">🕐</div>
+                            <div class="recurso-title">Timeline Completa do Cliente</div>
+                        </div>
+                        <div class="recurso-compare">
+                            <div class="compare-item antes">
+                                <span class="compare-badge">antes</span>
+                                <span class="compare-text">Vendedor novo pergunta para o colega o que aconteceu com aquele cliente. Colega não lembra.</span>
+                            </div>
+                            <div class="compare-item depois">
+                                <span class="compare-badge">depois</span>
+                                <span class="compare-text">Todo o histórico em um lugar. Qualquer pessoa abre e sabe exatamente o que aconteceu, quando e por quem.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- BLOCO 4: IMPLEMENTAÇÃO -->
+            <div class="recursos-bloco" data-rb>
+                <div class="bloco-label">
+                    <span class="bloco-label-text">Implementação</span>
+                    <span class="bloco-label-line"></span>
+                    <span style="font-family:'Space Mono',monospace;font-size:9px;color:rgba(255,255,255,0.2);letter-spacing:0.08em;">Rodando antes do fim da semana</span>
+                </div>
+                <div class="recursos-grid">
+
+                    <div class="recurso-card">
+                        <div class="recurso-top">
+                            <div class="recurso-icon">📂</div>
+                            <div class="recurso-title">Importação de Dados</div>
+                        </div>
+                        <div class="recurso-compare">
+                            <div class="compare-item antes">
+                                <span class="compare-badge">antes</span>
+                                <span class="compare-text">Semanas de projeto para migrar do sistema antigo. Metade dos dados perdidos no caminho.</span>
+                            </div>
+                            <div class="compare-item depois">
+                                <span class="compare-badge">depois</span>
+                                <span class="compare-text">Planilha, Pipedrive ou sistema legado. Importado em minutos. Histórico intacto. Time começa a operar no mesmo dia.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recurso-card">
+                        <div class="recurso-top">
+                            <div class="recurso-icon">🛠️</div>
+                            <div class="recurso-title">Interface No-Code</div>
+                        </div>
+                        <div class="recurso-compare">
+                            <div class="compare-item antes">
+                                <span class="compare-badge">antes</span>
+                                <span class="compare-text">Ticket aberto para TI. TI com outras prioridades. Ninguém sabe quando sai.</span>
+                            </div>
+                            <div class="compare-item depois">
+                                <span class="compare-badge">depois</span>
+                                <span class="compare-text">Qualquer gestor configura e mantém. Sem TI. Sem desenvolvedor. Você abre, configura e começa.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recurso-card">
+                        <div class="recurso-top">
+                            <div class="recurso-icon">🚀</div>
+                            <div class="recurso-title">Onboarding Guiado</div>
+                        </div>
+                        <div class="recurso-compare">
+                            <div class="compare-item antes">
+                                <span class="compare-badge">antes</span>
+                                <span class="compare-text">Contratou o software, recebeu um manual de 200 páginas e boa sorte.</span>
+                            </div>
+                            <div class="compare-item depois">
+                                <span class="compare-badge">depois</span>
+                                <span class="compare-text">3 dias com acompanhamento. Quick wins visíveis na primeira semana. Time operando de verdade antes do fim do mês.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CTA FINAL -->
+            <div class="recursos-cta">
+                <div class="recursos-cta-headline">Não é a lista <span class="rw">mais longa</span> do mercado.<br>É a mais honesta.</div>
+                <p>Cada um desses recursos foi construído para um time que não tem tempo a perder.</p>
+                <div class="recursos-cta-btns">
+                    <a href="#" class="rc-btn-p">⚡ Calcule seu custo oculto →</a>
+                    <a href="#" class="rc-btn-s">Agendar demo de 15 min</a>
                 </div>
             </div>
 
@@ -2235,6 +2787,26 @@
 
             var grid = document.getElementById('persona-grid');
             if (grid) fwObs.observe(grid);
+        })();
+    </script>
+
+    <!-- SCRIPT RECURSOS -->
+    <script>
+        (function () {
+            var blocos = document.querySelectorAll('[data-rb]');
+            blocos.forEach(function (bloco) {
+                var triggered = false;
+                var obs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting && !triggered) {
+                            triggered = true;
+                            bloco.classList.add('rb-in');
+                            obs.disconnect();
+                        }
+                    });
+                }, { threshold: 0.15 });
+                if (bloco) obs.observe(bloco);
+            });
         })();
     </script>
 
